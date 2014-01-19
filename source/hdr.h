@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_DEPRECATE 1
+#define _CRT_NON_CONFORMING_SWPRINTFS 1
 
 #include <windows.h>
 #include <stdlib.h>
