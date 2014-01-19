@@ -1,0 +1,147 @@
+;help file name
+13=readme.txt
+
+;dialog box buttons
+1=OK
+2=Cancel
+
+;keyboard accelerators
+97=Ctrl+
+98=Shift+
+99=Alt+
+
+
+;menu
+400=&Game
+202=&New game
+235=&Editor
+236=&End editor
+203=&Solve
+237=&Clear all
+206=Clear s&ymbols
+228=Clear &marks
+221=Clear &groups
+227=Clear '>' s&igns
+231=Clear consecuti&ve
+219=&Open...
+220=S&ave...
+222=Save &picture...
+229=Create PD&F...
+215=&High scores...
+211=Delete settings
+214=Delete hiscores
+201=E&xit
+
+405=&Move
+204=&Undo
+205=&Redo
+233=U&ndo symbol
+234=R&edo symbol
+212=Undo &all
+213=Redo a&ll
+216=&Hint
+238=&Show candidates
+
+402=&Options
+208=&Diagonals
+223=&Symmetrical
+217=&Killer
+226=&Greater Than
+230=Co&nsecutive
+232=&Odd/Even
+224=&Level...
+209=Show &errors...
+218=&Colors...
+406=S&ymbols
+350=&Digits
+351=&Letters
+352=&Colors
+403=Lan&guage
+
+401=&Size
+
+407=M&ulti
+
+404=&Help
+225=&Readme
+210=&About...
+
+
+;colors dialog box
+23=Colors
+515=Color symbols:
+508=Background:
+517=Group:
+509=Grid:
+512=Large grid:
+518=Sum:
+521=Sum error:
+514=Mistake:
+513=Number or letter:
+524=Greater than sign:
+525=Inequality error:
+526=Killer sudoku
+527=Greater Than sudoku
+529=Consecutive sign:
+530=Consecutive error:
+532=Even background:
+
+;about dialog box
+11=About
+511=Version
+
+;create new group dialog box
+24=Group
+522=Sum:
+
+;change level dialog box
+25=Level
+540=Number from 0 to 100:
+
+;show errors dialog box
+27=Show errors
+541=Show errors after
+542=seconds
+
+;show high scores dialog box
+14=Sudoku - High Scores
+610=Name
+611=Date
+612=Time
+519=Size:
+501=&Diagonals
+502=&Killer
+503=&Greater Than
+504=Co&nsecutive
+505=&Odd/Even
+
+;new best score dialog box
+12=High score
+520=Your name :
+
+;generate PDF file dialog box
+26=Create PDF
+300=Total count:
+301=Count on page:
+302=Page size:
+303=Output file:
+304=Game
+305=Symbols
+306=Page border:
+307=Spacing:
+309=Symmetrical
+312=Level:
+
+;status bar
+660=groups
+661=Game over
+662=solutions
+
+;error messages
+730=Cannot open file %s
+731=Invalid format of %s
+733=Cannot create file %s
+735=Cannot write to Windows registry
+799=Do you really want to delete all hiscores ?
+800=Total sum of all groups is %d, but it should be %d
+801=Do you want to start a new game ?

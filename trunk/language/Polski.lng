@@ -1,0 +1,98 @@
+;T³umaczenie na jêzyk polski Artur Kajzer
+
+510=(C) 2005-2012  Petr Laštovièka
+511=Wersja
+
+1=OK
+2=Anuluj
+11=O programie
+12=Najlepszy czas
+14=Sudoku - Najlepsze czasy
+23=Kolory
+24=Grupa
+25=Poziom
+27=Poka¿ b³êdy
+
+201=Koni&ec
+202=&Nowa Gra
+204=&Cofnij
+205=P&owtórz
+206=&Wyczyœæ
+203=&Rozwi¹zanie
+208=P&rzek¹tne
+209=&Poka¿  b³êdy...
+210=&O programie
+211=Resetuj ustawienia
+212=&Cofnij wszystko
+213=Powtórz ws&zystko
+214=Wyczyœæ tablicê wyników
+215=Naj&lepsze wyniki...
+216=&PodpowiedŸ
+217=&Killer sudoku
+218=&Kolory...
+219=&Otwórz...
+220=&Zapisz...
+221=Wyczyœæ g&rupê
+222=Zapisz ob&razek...
+223=&Symetria
+224=&Poziom...
+225=&Pomoc
+
+350=Cy&fry
+351=&Litery
+352=&Kolory
+
+400=&Gra
+401=&Wielkoœæ
+402=&Opcje
+403=&Jêzyk
+404=&Pomoc
+405=&Ruch
+406=S&ymbole
+
+501=P&rzek¹tne
+502=&Killer sudoku
+519=Wielkoœæ:
+508=T³o:
+509=Siatka:
+512=Du¿a siatka:
+513=Cyfry lub litery:
+514=B³êdy:
+515=Kolory symboli:
+517=Grupy:
+518=Suma:
+521=B³êdy sumy:
+540=Liczba od 0 do 100:
+
+520=Twoje imiê :
+522=Suma:
+610=Imiê
+611=Data
+612=Czas
+660=Grup
+661=Koniec gry
+
+730=Nie mo¿na otworzyæ pliku %s
+731=Z³y format pliku %s
+733=Nie mo¿na otworzyæ pliku %s
+799=Napewno chcesz wyczyœciæ najlepsze wyniki ?
+800=Suma we wszystkich grupach wynosi %d, ale mog³aby wynosiæ %d
+801=Chcesz rozpocz¹æ now¹  grê ?
+
+
+;menu
+228=Wyczyœæ&znaczki
+227=Wyczyœæ  '>' (znaki nierównoœci)
+226="&Wiêkszy ni¿"
+
+;Okno dialogowe Najlepsze wyniki
+503="&Wiêkszy ni¿"
+
+;Okno dialogowe kolory
+527="Wiêkszy ni¿" sudoku
+524="Wiêkszy ni¿" znak:
+525=B³¹d nierównoœci:
+
+;status bar
+662=Rozwi¹zanie
+
