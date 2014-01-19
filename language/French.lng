@@ -1,0 +1,147 @@
+;help file name
+13=readme.txt
+
+;dialog box buttons
+1=OK
+2=Annuler
+
+;accélérateur clavier
+97=Ctrl+
+98=Shift+
+99=Alt+
+
+
+;menu
+400=&Jeu
+202=&Nouveau jeu
+235=&Editeur
+236=&Fin editor
+203=&Résoudre
+237=&Nettoyer tout
+206=NOettoyer symboles
+228=Nettoyer marques
+221=Nettoyer groupes
+227=Nettoyer '>' signes
+231=Nettoyage consécutif
+219=&Ouvrir...
+220=Sauvegarder...
+222=Sauvegarder image...
+229=Créer PDF...
+215=Meilleurs scores...
+211=Supprimer préférences
+214=Supprimer scores
+201=Exit
+
+405=&Mouvements
+204=&Défaire
+205=&Refaire
+233=Défaire symbole
+234=Refaire symbole
+212=Défaire tout
+213=Refaire tout
+216=&Conseil
+238=&Voir les possibilités
+
+402=&Options
+208=&Diagonales
+223=&Symmetrique
+217=&Killer
+226=&PLus grand que
+230=Consécutif
+232=&Pair/Impair
+224=&Niveau...
+209=Voir les erreurs...
+218=&Couleurs...
+406=S&ymboles
+350=&Chiffres
+351=&Lettres
+352=&Couleurs
+403=Langue
+
+401=&Taille
+
+407=Multi
+
+404=&Aide
+225=&Readme
+210=&A propos...
+
+
+;colors dialog box
+23=Couleurs
+515=Couleur symboles:
+508=Fond:
+517=Groupe:
+509=Grille:
+512=grille épaisse:
+518=Somme:
+521=Erreur de somme:
+514=Faute:
+513=Nombre ou lettre:
+524=Signe PLus grand que:
+525=Erreur inégalité:
+526=Killer sudoku
+527=PLus grand que sudoku
+529=signe consécutif:
+530=Erreur Consécutif:
+532=FOnd pair:
+
+;about dialog box
+11=A propos
+511=Version
+
+;create new group dialog box
+24=Groupe
+522=Somme:
+
+;change level dialog box
+25=Niveau
+540=Nombre de 0 à 100:
+
+;show errors dialog box
+27=Voir les erreurs
+541=Voir les erreurs après
+542=secondes
+
+;show high scores dialog box
+14=Sudoku - Meilleurs Scores
+610=Nom
+611=Date
+612=Temps
+519=Taille:
+501=&Diagonales
+502=&Killer
+503=&Plus grand que
+504=Consécutif
+505=&Pair/Impair
+
+;new best score dialog box
+12=Meilleur score
+520=Ton nom :
+
+;generate PDF file dialog box
+26=Créer PDF
+300=Total compte:
+301=compte à page:
+302=Taille page:
+303=fichier de sortie:
+304=Jeu
+305=Symboles
+306=Marge:
+307=Espacemement:
+309=Symmetrique
+312=Niveau:
+
+;status bar
+660=groupes
+661=Game over
+662=solutions
+
+;error messages
+730=Impossible d'ouvrir le fichier %s
+731=format non valide de  %s
+733=Impossible de créer le fichier %s
+735=Impossible d'écrire dans le registre windows
+799=Veux-tu vraiment supprimer les scores?
+800=La somme total de tous les groupe est %d, mais devrait être %d
+801=Veux-tu commencer une nouvelle partie ?

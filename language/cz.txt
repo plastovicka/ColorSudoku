@@ -1,0 +1,148 @@
+**************
+ Color Sudoku
+**************
+
+Pravidla
+--------
+Vaším úkolem je vyplnit celı ètverec èíslicemi 1 a 9 tak, aby se v ádném sloupci, øádku a ani v jednom z devíti zvıraznìnıch menších ètvercù nevyskytovaly dvì stejné èíslice.
+V menu Monosti si mùete zaškrtnout další varianty hry:
+Úhlopøíèky - na obou úhlopøíèkách se nesmìjí vyskytovat dvì stejné èíslice.
+Symetrické - poèáteèní èíslice jsou rozmístìny tak, aby byly soumìrné podle støedu hrací plochy. Pravidla hry jsou stejná jako u normálního sudoku.
+Souètové - hrací plocha je rozdìlena na nìkolik oblastí a v kadé oblasti je zobrazeno èíslo urèující souèet èíslic v této oblasti. Uvnitø oblasti se nesmìjí vyskytovat dvì stejné èíslice.
+Srovnávací - mezi nìkterımi políèky jsou napsány znaky >, které znamenají, e èíslice na jednom políèku musí bıt vìtší ne èíslice na druhém políèku.
+Sousledné - mezi nìkterımi políèky je zvıraznìna èára, která znamená, e èíslice na jednom políèku je pøesnì o jedna vìtší nebo menší ne èíslice na druhém políèku. Pokud mezi nìkterımi dvìma políèky taková èára není, pak rozdíl èíslic na tìchto políèkách nesmí bıt jedna.
+Liché/sudé - hrací plocha je rozdìlena na svìtlá a tmavá políèka. Na svìtlıch políèkách jsou liché èíslice, na tmavıch políèkách jsou sudé èíslice.
+Je moné zaškrtnout více variant a libovolnì je kombinovat. 
+
+Monosti
+--------
+Kromì èíslic mùete rozmísovat také písmena nebo barvy (menu Monosti/Symboly). To ale neplatí pro souètové sudoku, pøi kterém jsou povoleny jen èíslice. Obtínost udává, kolik procent plochy je na zaèátku hry zaplnìno. Obtínost 0 je nejtìší, pøi obtínosti 100 se generují u vyøešené sudoku. Kdy v menu kliknete na "Zvıraznit chyby...", pak mùete zvolit, za kolik sekund poèítaè zviditelní špatnì zadané èíslice. Pokud jste zaèáteèníci, pak si nastavte menší hodnotu. Jakmile vám poèítaè ukáe, e jste udìlali chybu, pak se po dokonèení hry váš èas nezapíše do tabulky nejlepších vısledkù. Proto nastavte alespoò tolik sekund, abyste stihli vrátit tah zpìt, kdy napøíklad omylem kliknete myší vedle.
+V menu Velikost si mùete zvolit rozmìry hrací plochy. Velikosti vìtší ne 12 jsou hodnì obtíné.
+V menu Tvar si mùete vybrat vìtší varianty, které jsou sloeny ze dvou a pìti pøekrıvajících se sudoku. Tvary Flower a Windmill jsou sloené z pìti sudoku (páté je uprostøed).
+
+Ovládání
+--------
+Nejdøíve si na panelu nástrojù zvolíte, kterı symbol chcete umístit, a potom kliknete levım tlaèítkem myši na hrací plochu na políèko, kam chcete symbol umístit. Místo panelu nástrojù mùete symboly pøepínat také pomocí klávesnice, co je trochu rychlejší, protoe nemusíte tolik pohybovat myší. Kdy udìláte chybu, pak buï pouijte funkci Zpìt nebo chybnı symbol pøepište nìjakım jinım symbolem. Také mùete na panelu nástrojù stisknout tlaèítko èervené X a potom kliknutím myši smazat chybnı symbol. Pravım tlaèítkem myši lze políèka oznaèovat malımi pomocnımi symboly.
+
+Èas
+---
+Bìhem hry se mìøí èas. Kdy je okno minimalizované, pak je èas pozastaven. Hráèi s nejlepším èasem se zapíší do tabulky.
+Do tabulky se ale nezapíšete v tìchto pøípadech:
+1) v menu Velikost je zaškrtnuta jiná velikost ne 6,9,12
+2) v menu Monosti je zaškrtnuto Symetrické 
+3) v menu Monosti je nastavena obtínost jiná ne 0
+4) z menu Tah byla pouita funkce "Napovìdìt" nebo "Spoèítat kandidáty"
+5) z menu Hra byla pouita nìkterá z funkcí "Otevøít", "Vyøešit", "Zadat vlastní hru"
+6) udìlali jste v prùbìhu hry chybu a nestihli jste ji vrátit zpìt døíve ne kolik je nastaveno v menu Monosti/"Zvıraznit chyby..."
+
+Zde jsou pro zajímavost moje nejlepší èasy:
+6x6 	9x9  	12x12	klasické sudoku
+0:54	3:28 	17:10	bez úhlopøíèek
+1:22	8:35 	29:23	s úhlopøíèkami
+
+6x6 	9x9  	12x12	Liché/sudé sudoku
+0:36	3:28 	16:40	bez úhlopøíèek
+1:00	6:11 	22:53	s úhlopøíèkami      
+
+6x6 	9x9  	Souètové sudoku
+2:01	27:41	bez úhlopøíèek
+3:55	30:05	s úhlopøíèkami
+
+6x6 	9x9  	Srovnávací sudoku
+2:33	27:25	bez úhlopøíèek
+3:08	35:27	s úhlopøíèkami      
+
+6x6 	9x9  	Sousledné sudoku
+1:25	10:50	bez úhlopøíèek
+2:18	11:27	s úhlopøíèkami      
+
+
+Vlastní zadání
+--------------
+Mùete si také vytvoøit své vlastní sudoku. Hodí se to i v pøípadech, e naleznete sudoku napøíklad v novinách a chcete si ho zahrát na poèítaèi a nebo chcete, aby ho poèítaè za vás vyøešil. Nejdøíve v menu Hra zvolte "Zadat vlastní hru". Potom zkontrolujte, jestli jsou správnì zaškrtnuty všechny pøepínaèe v menu Monosti. Pøi kadé jejich zmìnì se toti vymae hrací plocha. Pak rozmístìte èíslice stejnım zpùsobem, jako pøi normální høe.
+* Souètové sudoku: Stisknìte klávesu Insert nebo na panelu nástrojù tlaèítko se symbolem suma. Novou oblast vytvoøíte tak, e stisknete levé tlaèítko myši, pøejedete pøes políèka patøící do této oblasti, uvolníte tlaèítko myši a zadáte souèet. Existující oblast lze zvìtšit tak, e pøi stisknutém tlaèítku myši pøejedete myší z této oblasti na volná sousední políèka. Dvì oblasti lze spojit tak, e pøi stisknutém tlaèítku myši pøejedete z jedné oblasti do druhé. Souèet u existující oblasti lze zmìnit tak, e na oblast kliknete levım tlaèítkem. Oblast lze odstranit tím, e její souèet zmìníte na nulu.
+* Srovnávací sudoku: Na panelu nástrojù nebo na klávesnici stisknìte '>'. Kdy na hrací plochu kliknete levım tlaèítkem myši, umístí se '>', kdy kliknete pravım tlaèítkem myši, objeví se '<'. Kdy kliknete na existující znak, bude pøepsán nebo smazán.      
+* Sousledné sudoku: Na panelu nástrojù nebo na klávesnici stisknìte '|'. Pak levım tlaèítkem myši pøidávejte nebo odebírejte souslednosti.
+* Liché/sudé sudoku: Na panelu nástrojù kliknìte na tlaèítko I/II nebo na klávesnici stisknìte '-' (je vedle pravého shift). Pak levım tlaèítkem myši mìòte jednotlivá políèka na lichá nebo sudá.
+
+Nakonec v menu Hra zvolte "Hotovo,zaèít hrát" nebo kliknìte na první tlaèítko na panelu nástrojù. Kdy chcete, aby sudoku vyøešil poèítaè, pouijte funkci Hra/Vyøešit. Pokud se tím nezaplní celé hrací pole, pak bylo vaše zadání chybné. Jestlie má úloha více øešení, pak se jejich poèet zobrazí na stavovém øádku a pøi opakování funkce Vyøešit (F9) se postupnì zobrazují další øešení. Jestlie je poèet øešení pøíliš velkı, poèítaè nalezne jen 100 z nich. Kdy v menu Tah kliknete na "Všechno zpìt", vrátí se hrací plocha do stavu pøed pouitím funkce Vyøešit.
+
+
+Popis algoritmu
+---------------
+Pøi generování zadání nové hry poèítaè postupuje podle následujících pravidel. Samozøejmì se jimi pøi øešení mùe øídit i èlovìk. Nejèastìji se pouívají první dvì pravidla. Slovem øada budeme oznaèovat øádek/sloupec/podètverec/úhlopøíèku.
+1) Kdy na nìjakém políèku ze všech symbolù mùe bıt u jen jeden, pak ho tam umísti.
+2) Kdy v nìjaké øadì mùe bıt nìjakı symbol u jen na jednom políèku, pak ho tam umísti.
+3) Kdy na n políèkách leících ve stejné øadì mùe bıt u jen n stejnıch symbolù, pak na všech ostatních políèkách ve stejné øadì tyto symboly bıt nemohou.
+4) Kdy v nìjaké øadì mùe bıt nìjakıch n symbolù u jen na n stejnıch políèkách, pak na tìchto n políèkách kromì tìchto n symbolù nemohou bıt ádné jiné symboly.
+5) Kdy v nìjaké øadì mùe nìjakı symbol leet jen v té èásti øady, která je prùseèíkem s jinou øadou, pak tento symbol nemùe v druhé øadì leet na ostatních políèkách mimo prùseèík. Toto pravidlo se pouívá tehdy, kdy má prùseèík více ne jedno políèko (jedná se o prùnik sloupce nebo øádku s podètvercem).
+6) Kdy nìjakı symbol mùe v nìjakıch n sloupcích bıt jen na n políèkách a dohromady všech takovıch n*n políèek leí právì na n øádcích, pak na tìchto øádcích danı symbol nemùe leet na ostatních políèkách kromì danıch n sloupcù. Podobnì to platí, kdy se v pøedchozí vìtì zamìní øádky a sloupce. Tomuto pravidlu se øíká "Swordfish" nebo "X-Wing".
+7) souètové sudoku: Pro kadou oblast se naleznou všechny moné variace rùznıch èíslic, které dávají poadovanı souèet. Kdy se bìhem hry zjistí, e na nìjakém políèku nemùe bıt nìjaká èíslice, pak se ze seznamu vyškrtnou ty variace, které na daném políèku obsahují danou èíslici. Kvùli rychlosti a spotøebì pamìti se variace nepoèítají pro oblasti vìtší ne 5 políèek.
+8) souètové sudoku: Kdy se nìjaká èíslice na nìjakém políèku nevyskytuje ani v jedné z monıch variací, pak se poznamená, e tato èíslice na tomto políèku bıt nemùe.
+9) souètové sudoku: Kdy se v nìjaké oblasti nìjaká èíslice vyskytuje ve všech variacích a zároveò celá oblast leí v jedné øadì, pak v této øadì tato èíslice nemùe bıt na ostatních políèkách mimo tuto oblast.
+10) souètové sudoku: Souèet èíslic v øadì je (velikost*(velikost+1)/2). Kdy se od nìj odeètou souèty oblastí, které celé leí uvnitø této øady, pak se získá souèet ostatních èíslic v této øadì (které leí v oblastech pøesahujících do jinıch øad). Tomuto pravidlu se øíká "45".
+11) srovnávací sudoku: Kdy na nìjakém políèku mohou bıt u jen èíslice od a do b, pak na sousedních "vìtších" políèkách mohou bıt jen èísla vìtší ne a, na sousedních "menších" políèkách mohou bıt jen èísla menší ne b.  
+12) sousledné sudoku: Kdy dvì políèka jsou oznaèena jako sousledná a na jednom z nich u nemohou bıt èíslice x-1 a x+1, pak na druhém políèku nemùe bıt èíslice x.
+13) sousledné sudoku: Kdy dvì sousedící políèka nejsou oznaèena jako sousledná a na jednom z nich mùe bıt u jen èíslice x, pak na druhém políèku nemohou bıt èíslice x-1 a x+1.
+14) sousledné sudoku: Kdy dvì sousedící políèka nejsou oznaèena jako sousledná a na jednom z nich mohou bıt u jen èíslice x nebo x+1, pak na druhém políèku nemohou bıt èíslice x a x+1.
+15) sousledné sudoku: Kdy dvì sousedící políèka nejsou oznaèena jako sousledná a na jednom z nich mohou bıt u jen èíslice x nebo x+1 nebo x+2, pak na druhém políèku nemùe bıt èíslice x+1.
+16) sousledné sudoku: Kdy nìjaké políèko P má dvì s ním sousledná políèka Q,R a políèka Q,R leí v jedné øadì a zároveò není moné, aby na políèku Q byla èíslice x-1 a na políèku R byla èíslice x+1, a zároveò také není moné, aby na políèku Q byla èíslice x+1 a na políèku R byla èíslice x-1, pak na políèku P nemùe bıt èíslice x.
+17) Kdy byla pouita všechna pøedchozí pravidla, pak se zkouší umístit náhodnı symbol na náhodné pole. Kdy se pozdìji zjistí, e je úloha dále neøešitelná, pak se provede návrat zpìt a na dané políèko se zkoušejí umístit ostatní symboly. 
+18) Zadání všech her jsou generována tak, aby mìla jen jedno øešení a zároveò aby se dala vyøešit bez pouití pravidla 17.
+
+
+Co je nového
+------------
+3.1.4 (20.2.2012)
+hra funguje v operaèním systému Linux (kdy máte nainstalováno WINE)
+ikona je barevná
+
+3.1.1 (7.8.2009)
+Liché/sudé sudoku
+zpìt/znovu funguje na symboly i znaèky
+chyby se ukáou a po tolika sekundách, kolik je nastaveno v monostech
+Hra / Zadat vlastní hru
+Tah / Spoèítat kandidáty
+
+3.0 (26.12.2007)
+multi Sudoku (Double, Butterfly, Samurai, ...)
+tabulky nejlepších èasù také pro 12x12 souètové a srovnávací
+Hra / Vytvoøit PDF
+
+2.3 (20.6.2006)
+srovnávací sudoku
+funkce "Vyøešit" nalezne všechna øešení
+
+2.2 (29.4.2006)
+nejlepší èasy se ukládají do sloky All Users\Data aplikací
+X na stavovém øádku znamená, e jsou zapnuté úhlopøíèky
+
+2.1 (1.3.2006)
+pravım tlaèítkem myši se umísují znaèky
+lepší algoritmus - pøidána pravidla 3, 4, 6, 9, 10
+lze nastavit obtínost
+monost Symetrické
+
+2.0 (19.2.2006)
+souètové sudoku
+uloení/otevøení souboru
+uloení obrázku
+lze zmìnit barvy
+
+1.0 (4.11.2005)
+zpìt, vpøed
+Hra/Vyøešit
+
+
+Licence
+-------
+Na tento program se vztahuje licence "GNU General Public License". Zde jsou uvedeny jen nejdùleitìjší body. Celé její znìní (33KB, v angliètinì) lze stáhnout z autorovy webové stránky nebo http://opensource.org/licenses. 
+
+1) Program je zdarma. Je povoleno ho kopírovat nebo distribuovat na CD, tøeba spolu s jinımi programy. 
+2) Program si mùete pro vlastní potøebu upravit. Také mùete èásti zdrojového kódu pouít do svıch vlastních programù. V obou pøípadech musíte splnit následující poadavky:
+ a) Nesmíte zmìnit nebo odstranit tuto licenci.
+ b) Nesmíte smazat jméno pùvodního autora.
+ c) Zdokumentujete všechny provedené zmìny a u kadé zmìny uvedete datum.
+ d) Zdrojové kódy (vèetnì vašich úprav a rozšíøení) zdarma zveøejníte na internetu. 
+
+http://petr.lastovicka.sweb.cz

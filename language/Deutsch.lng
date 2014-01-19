@@ -1,0 +1,124 @@
+;DeutscheÜbersetzung: Olaf Nöhring (2007) + Akt. jf (2010)
+511=Version
+13=language\\de.txt
+1=OK
+2=Abbrechen
+
+11=Über
+12=Highscore
+14=Sudoku - Highscores
+23=Farben
+24=Gruppe
+25=Lästigkeit
+26=Generierung PDF
+27=Markieren Fehler
+
+201=Beenden
+202=&Neues Spiel
+204=&Rückgängig
+205=&Wiederholen
+206=Löschen
+203=Zu lösen
+208=&Diagonalen
+209=Zeige F&ehler...
+210=Über...
+211=Einstellungen löschen
+212=&Alles Rückgängig
+213=A&lles wiederholen
+214=Highscores löschen
+215=&Highscores...
+216=&Hinweis
+217=&Kumulativ (Killer)
+218=&Farben...
+219=&Öffnen...
+220=&Speichern...
+221=&Gruppen löschen
+222=Als Bild s&peichern...
+223=&Symmetrisch
+224=Lästigkeit...
+225=&Hilfe
+226=&Größer als ( > )
+227=Lösche ' > ' Z&eichen
+228=&Hilfsmarkierungen löschen
+229=Herstellen PD&F...
+230=Einanderfolgende ( | )
+231=Lösche ' | ' Ze&ichen 
+232=&Ungerade/Gerade
+233=Zurück &Symbol
+234=Wieder S&ymbol
+235=&Geben eigenes Spiel
+236=&Fertig, anfangen zu spielen
+237=&Löschen alle
+238=Berechnen Kandidaten
+
+350=Ziffern
+351=Buchstaben
+352=Farben
+
+400=&Spiel
+401=&Größe
+402=&Optionen
+403=Sprache
+404=&Hilfe
+405=&Zug
+406=S&ymbole
+407=&Form
+
+501=&Diagonalen
+502=&Killer (kumulativ)
+503=&Größer als ( > )
+504=Einanderfolgende ( | )
+505=&Ungerade/Gerade
+519=Größe:
+508=Hintergrund:
+509=Raster:
+512=Großes Raster:
+513=Buchstabe oder Zahl:
+514=Fehler:
+515=Farben:
+517=Gruppe:
+518=Summe:
+521=Summenfehler:
+524=Zeichen  > :
+525=Ungleichungsfehler:
+529=Linienbetonung  | :
+530=Differenzfehler:
+532=Gerade Hintergrund:
+
+540=Zahl von 0 bis 100:
+541=Zeigen Fehler in
+542=Sekunden
+
+520=Dein Name:
+522=Summe:
+610=Name
+611=Datum
+612=Zeit
+660=Gruppen
+661=Spielende
+662=Lösungen
+
+730=Kann Datei %s nicht öffnen
+731=%s hat falsches Format
+733=Kann %s nicht schreiben
+735=Kann nicht in die Windows Registry schreiben
+799=Wollen Sie wirklich alle Highscores löschen?
+800=Gesamtsumme aller Gruppen ist %d, sollte aber %d sein
+801=Wollen Sie ein neues Spiel beginnen?
+
+300=Anzahl Sudoku:
+301=Anzahl an Seite:
+302=Größe Seite:
+303=Ausgabedatei:
+304=Spiel
+305=Symbole
+306=Ränder Seite:
+307=Abstände:
+309=Symetrisch
+312=Lästigkeit:
+
+
+;key names
+97=Strg+
+98=Shift+
+99=Alt+

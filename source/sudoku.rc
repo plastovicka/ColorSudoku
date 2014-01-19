@@ -1,0 +1,527 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winresrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""winresrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "&End editor",                 ID_EDITOR_END
+        MENUITEM "&New game",                   ID_NEWGAME
+        MENUITEM "&Solve",                      ID_SOLVE
+        MENUITEM "&Editor",                     ID_EDITOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Clear all",                  ID_CLEAR_ALL
+        MENUITEM "Clear &marks",                ID_DELMARKS
+        MENUITEM "Clear s&ymbols",              ID_CLEAR
+        MENUITEM "Clear &groups",               ID_CLEAR_GRP
+        MENUITEM "Clear '>' s&igns",            ID_CLEAR_SGN
+        MENUITEM "Clear consecuti&ve",          ID_CLEAR_CONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Open...",                    ID_OPEN
+        MENUITEM "S&ave...",                    ID_SAVE
+        MENUITEM "Save &picture...",            ID_WRBMP
+        MENUITEM "Create PD&F...",              ID_PDF
+        MENUITEM SEPARATOR
+        MENUITEM "&High scores...",             ID_BEST_SCORES
+        MENUITEM SEPARATOR
+        MENUITEM "Delete settings",             ID_DELINI
+        MENUITEM "Delete hiscores",             ID_DELHISCORE
+        MENUITEM "E&xit",                       ID_EXIT
+    END
+    POPUP "&Move"
+    BEGIN
+        MENUITEM "&Undo",                       ID_UNDO
+        MENUITEM "&Redo",                       ID_REDO
+        MENUITEM "U&ndo symbol",                ID_UNDO_SYMBOL
+        MENUITEM "R&edo symbol",                ID_REDO_SYMBOL
+        MENUITEM "Undo &all",                   ID_UNDO_ALL
+        MENUITEM "Redo a&ll",                   ID_REDO_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Hint",                       ID_CHEAT
+        MENUITEM "&Show candidates",            ID_MARKS
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Diagonals",                  ID_DIAGONAL
+        MENUITEM "&Symmetrical",                ID_SYMETRIC
+        MENUITEM "&Killer",                     ID_KILLER
+        MENUITEM "&Greater Than",               ID_GREATER
+        MENUITEM "Co&nsecutive",                ID_CONSECUTIVE
+        MENUITEM "&Odd/Even",                   ID_ODDEVEN
+        MENUITEM "&Level...",                   ID_LEVEL
+        MENUITEM SEPARATOR
+        MENUITEM "Show &errors...",             ID_SHOWERR
+        MENUITEM "&Colors...",                  ID_COLORDLG
+        POPUP "S&ymbols"
+        BEGIN
+            MENUITEM "&Digits",                     ID_DIGITS
+            MENUITEM "&Letters",                    ID_LETTERS
+            MENUITEM "&Colors",                     ID_COLORS
+        END
+        POPUP "Lang&uage"
+        BEGIN
+            MENUITEM ".",                           29999
+        END
+    END
+    POPUP "&Size"
+    BEGIN
+        MENUITEM "6",                           4006
+        MENUITEM "9",                           4009
+        MENUITEM "12",                          4012
+        MENUITEM SEPARATOR
+        MENUITEM "4",                           4004
+        MENUITEM "8",                           4008
+        MENUITEM "10",                          4010
+        MENUITEM "14",                          4014
+        MENUITEM "15",                          4015
+        MENUITEM "16",                          4016
+        MENUITEM "18",                          4018
+        MENUITEM "20",                          4020
+    END
+    POPUP "M&ulti"
+    BEGIN
+        MENUITEM "Simple",                      450
+        MENUITEM SEPARATOR
+        MENUITEM "Double",                      451
+        MENUITEM "Twodoku",                     452
+        MENUITEM SEPARATOR
+        MENUITEM "Triple",                      458
+        MENUITEM SEPARATOR
+        MENUITEM "Butterfly",                   453
+        MENUITEM "Sohei",                       454
+        MENUITEM SEPARATOR
+        MENUITEM "Flower",                      455
+        MENUITEM "Windmill",                    456
+        MENUITEM "Samurai",                     457
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Readme",                     ID_HELP_README
+        MENUITEM "&About...",                   ID_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HISCORE DIALOG DISCARDABLE  11, 17, 208, 179
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sudoku - High Scores"
+FONT 10, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,153,144,46,13
+    LTEXT           "Name",610,10,4,57,8
+    CTEXT           "Date",611,72,4,46,8
+    CTEXT           "Time",612,153,4,50,8
+    RTEXT           "Size:",519,1,123,41,8
+    CONTROL         "&6",206,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,48,
+                    122,24,11
+    CONTROL         "&9",209,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,75,
+                    122,24,11
+    CONTROL         "&12",212,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,102,
+                    122,24,11
+    COMBOBOX        170,132,122,74,91,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "&Diagonals",IDC_DIAG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,140,68,10
+    CONTROL         "&Killer",IDC_KILLER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,76,140,67,10
+    CONTROL         "&Greater Than",IDC_GREATER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,152,68,10
+    CONTROL         "Co&nsecutive",IDC_CONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,76,152,68,10
+    CONTROL         "&Odd/Even",IDC_ODDEVEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,164,68,10
+END
+
+IDD_NAME DIALOG DISCARDABLE  40, 25, 154, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "High score"
+FONT 10, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Your name :",520,5,15,55,8
+    EDITTEXT        101,65,13,79,12
+    DEFPUSHBUTTON   "OK",IDOK,25,36,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,36,40,14
+END
+
+IDD_COLORS DIALOG DISCARDABLE  0, 0, 252, 231
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Colors"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Background:",508,9,12,68,8
+    CONTROL         "",121,"Button",BS_OWNERDRAW | WS_TABSTOP,81,9,15,15
+    LTEXT           "Grid:",509,9,29,68,8
+    CONTROL         "",122,"Button",BS_OWNERDRAW | WS_TABSTOP,81,26,15,15
+    LTEXT           "Large grid:",512,9,46,68,8
+    CONTROL         "",123,"Button",BS_OWNERDRAW | WS_TABSTOP,81,43,15,15
+    LTEXT           "Number or letter:",513,9,74,68,8
+    CONTROL         "",124,"Button",BS_OWNERDRAW | WS_TABSTOP,81,71,15,15
+    LTEXT           "Mistake:",514,9,91,68,8
+    CONTROL         "",125,"Button",BS_OWNERDRAW | WS_TABSTOP,81,88,15,15
+    GROUPBOX        "Odd/Even sudoku",505,8,128,109,35
+    LTEXT           "Even background:",532,13,146,74,8
+    CONTROL         "",133,"Button",BS_OWNERDRAW | WS_TABSTOP,92,144,15,15
+    GROUPBOX        "Killer sudoku",502,128,1,109,64
+    LTEXT           "Group:",517,135,15,76,8
+    CONTROL         "",128,"Button",BS_OWNERDRAW | WS_TABSTOP,214,12,15,15
+    LTEXT           "Sum:",518,135,32,76,8
+    CONTROL         "",126,"Button",BS_OWNERDRAW | WS_TABSTOP,214,29,15,15
+    LTEXT           "Sum error:",521,135,49,76,8
+    CONTROL         "",127,"Button",BS_OWNERDRAW | WS_TABSTOP,214,46,15,15
+    GROUPBOX        "Greater Than sudoku",503,128,67,109,47
+    LTEXT           "Greater Than sign:",524,135,81,76,8
+    CONTROL         "",129,"Button",BS_OWNERDRAW | WS_TABSTOP,214,78,15,15
+    LTEXT           "Inequality error:",525,135,98,76,8
+    CONTROL         "",130,"Button",BS_OWNERDRAW | WS_TABSTOP,214,95,15,15
+    GROUPBOX        "Consecutive sudoku",504,128,117,109,47
+    LTEXT           "Consecutive sign:",529,135,131,76,8
+    CONTROL         "",131,"Button",BS_OWNERDRAW | WS_TABSTOP,214,128,15,15
+    LTEXT           "Consecutive error:",530,135,148,76,8
+    CONTROL         "",132,"Button",BS_OWNERDRAW | WS_TABSTOP,214,145,15,15
+    CTEXT           "Color symbols:",515,3,175,74,8
+    CONTROL         "",100,"Button",BS_OWNERDRAW | WS_TABSTOP,80,170,15,15
+    CONTROL         "",101,"Button",BS_OWNERDRAW | WS_TABSTOP,95,170,15,15
+    CONTROL         "",102,"Button",BS_OWNERDRAW | WS_TABSTOP,110,170,15,15
+    CONTROL         "",103,"Button",BS_OWNERDRAW | WS_TABSTOP,125,170,15,15
+    CONTROL         "",104,"Button",BS_OWNERDRAW | WS_TABSTOP,140,170,15,15
+    CONTROL         "",105,"Button",BS_OWNERDRAW | WS_TABSTOP,155,170,15,15
+    CONTROL         "",106,"Button",BS_OWNERDRAW | WS_TABSTOP,170,170,15,15
+    CONTROL         "",107,"Button",BS_OWNERDRAW | WS_TABSTOP,185,170,15,15
+    CONTROL         "",108,"Button",BS_OWNERDRAW | WS_TABSTOP,200,170,15,15
+    CONTROL         "",109,"Button",BS_OWNERDRAW | WS_TABSTOP,80,187,15,15
+    CONTROL         "",110,"Button",BS_OWNERDRAW | WS_TABSTOP,95,187,15,15
+    CONTROL         "",111,"Button",BS_OWNERDRAW | WS_TABSTOP,110,187,15,15
+    CONTROL         "",112,"Button",BS_OWNERDRAW | WS_TABSTOP,125,187,15,15
+    CONTROL         "",113,"Button",BS_OWNERDRAW | WS_TABSTOP,140,187,15,15
+    CONTROL         "",114,"Button",BS_OWNERDRAW | WS_TABSTOP,155,187,15,15
+    CONTROL         "",115,"Button",BS_OWNERDRAW | WS_TABSTOP,170,187,15,15
+    CONTROL         "",116,"Button",BS_OWNERDRAW | WS_TABSTOP,185,187,15,15
+    CONTROL         "",117,"Button",BS_OWNERDRAW | WS_TABSTOP,200,187,15,15
+    CONTROL         "",118,"Button",BS_OWNERDRAW | WS_TABSTOP,215,187,15,15
+    CONTROL         "",119,"Button",BS_OWNERDRAW | WS_TABSTOP,230,187,15,15
+    DEFPUSHBUTTON   "OK",IDOK,60,210,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,141,210,50,15
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  52, 18, 113, 104
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 11, "MS Shell Dlg"
+BEGIN
+    CTEXT           "(C) 2005-2012  Petr Lastovicka",510,4,49,105,10
+    RTEXT           "Version",511,30,23,30,9
+    CTEXT           "Color  Sudoku",IDC_STATIC,21,5,72,9,SS_SUNKEN
+    ICON            IDI_MAINICON,IDC_STATIC,15,20,20,20
+    PUSHBUTTON      "OK",IDOK,40,84,32,14
+    ICON            IDI_MAINICON,IDC_STATIC,85,20,20,20
+    PUSHBUTTON      "http://petr.lastovicka.sweb.cz",123,9,64,95,11
+    LTEXT           " ",101,65,23,15,8
+END
+
+IDD_SUM DIALOG DISCARDABLE  0, 0, 130, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Group"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    CTEXT           "Sum:",522,10,9,53,8
+    EDITTEXT        101,72,7,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,7,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,31,50,14
+END
+
+IDD_LEVEL DIALOG DISCARDABLE  0, 0, 140, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Level"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    CTEXT           "Number from 0 to 100:",540,4,10,89,8
+    EDITTEXT        101,98,7,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,13,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,31,50,14
+END
+
+IDD_ERRTIME DIALOG DISCARDABLE  0, 0, 205, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Show errors"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    RTEXT           "Show errors after",541,0,10,104,8
+    EDITTEXT        101,110,7,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds",542,144,10,53,8
+    DEFPUSHBUTTON   "OK",IDOK,39,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,31,50,14
+END
+
+IDD_PDF DIALOG DISCARDABLE  0, 0, 187, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create PDF"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Total count:",300,7,9,48,8
+    EDITTEXT        160,59,6,23,14,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Count on page:",301,85,9,59,8
+    COMBOBOX        161,148,7,32,125,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Page size:",302,7,31,49,8
+    COMBOBOX        162,59,29,46,115,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        163,116,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "x",IDC_STATIC,145,31,8,8
+    EDITTEXT        164,155,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Page border:",306,7,52,53,8
+    EDITTEXT        168,63,49,23,14,ES_AUTOHSCROLL
+    RTEXT           "Spacing:",307,93,52,50,8
+    EDITTEXT        169,148,49,23,14,ES_AUTOHSCROLL
+    GROUPBOX        "Game",304,7,69,92,115
+    CONTROL         "Diagonals",IDC_DIAG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,85,81,10
+    CONTROL         "Symmetrical",309,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,98,81,10
+    CONTROL         "Killer",IDC_KILLER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,111,81,10
+    CONTROL         "Greater Than",IDC_GREATER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,124,81,10
+    CONTROL         "Consecutive",IDC_CONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,137,81,10
+    CONTROL         "Odd/Even",IDC_ODDEVEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,150,81,10
+    COMBOBOX        170,12,165,80,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Symbols",305,113,77,67,60
+    CONTROL         "Digits",350,"Button",BS_AUTORADIOBUTTON | WS_GROUP,121,
+                    91,53,10
+    CONTROL         "Letters",351,"Button",BS_AUTORADIOBUTTON,121,106,53,10
+    CONTROL         "Colors",352,"Button",BS_AUTORADIOBUTTON,121,121,53,10
+    RTEXT           "Level:",312,103,153,41,8
+    EDITTEXT        165,150,151,26,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Output file:",303,7,192,173,8
+    EDITTEXT        166,7,205,156,14,ES_AUTOHSCROLL
+    PUSHBUTTON      ". . .",167,164,205,16,14
+    DEFPUSHBUTTON   "OK",IDOK,32,224,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,224,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINICON            ICON    DISCARDABLE     "sudoku.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS MOVEABLE PURE 
+BEGIN
+    VK_F6,          ID_BEST_SCORES,         VIRTKEY, NOINVERT
+    "H",            ID_CHEAT,               VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_COLORS,              VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_DIGITS,              VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EXIT,                VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_HELP_README,         VIRTKEY, NOINVERT
+    "2",            ID_LETTERS,             VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_MARKS,               VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_NEWGAME,             VIRTKEY, NOINVERT
+    "O",            ID_OPEN,                VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_PDF,                 VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_REDO,                VIRTKEY, SHIFT, NOINVERT
+    "Z",            ID_REDO,                VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "Y",            ID_REDO_SYMBOL,         VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_END,         ID_REDO_ALL,            VIRTKEY, NOINVERT
+    "S",            ID_SAVE,                VIRTKEY, CONTROL, NOINVERT
+    VK_F9,          ID_SOLVE,               VIRTKEY, NOINVERT
+    VK_F8,          ID_SOLVE1,              VIRTKEY, NOINVERT
+    VK_BACK,        ID_UNDO,                VIRTKEY, NOINVERT
+    "Z",            ID_UNDO,                VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_UNDO_SYMBOL,         VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_UNDO_ALL,            VIRTKEY, NOINVERT
+    "P",            ID_WRBMP,               VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,4,2
+ PRODUCTVERSION 0,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040504b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", " \0"
+            VALUE "FileDescription", "Color Sudoku\0"
+            VALUE "FileVersion", "3, 1, 4, 2\0"
+            VALUE "InternalName", "\0"
+            VALUE "LegalCopyright", "© 2005-2012 Petr Laštovièka\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "sudoku.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "\0"
+            VALUE "ProductVersion", "0, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x405, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_HISCORE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_NAME, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_COLORS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_SUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_LEVEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_ERRTIME, DIALOG
+    BEGIN
+        RIGHTMARGIN, 197
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_PDF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  MOVEABLE PURE   "sudotool.bmp"
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

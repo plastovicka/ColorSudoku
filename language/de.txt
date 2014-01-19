@@ -1,0 +1,139 @@
+**************
+ Color Sudoku
+**************
+
+Spielregel(n)
+-------------
+Sie müssen die Ziffern 1 bis 9 so in jede Zeile, jede Spalte und jeden Block (hervorgehobener Bereich) setzen, dass jede der Ziffern exakt einmal in jedem dieser drei Bereiche vorkommt.
+Wenn Sie Diagonalen im Optionsmenü ausgewählt haben, müssen sich die Ziffern 1 bis 9 auch in den beiden Hauptdiagonalen jeweils einmal wiederfinden. 
+Haben Sie "Killer Sudoku" im Optionsmenü gewählt, wird das Spielfeld in Gruppen eingeteilt. Am oberen linken Rand jeder Gruppe wird eine Zahl eingeblendet. Diese Zahl zeigt die Summe der einzelnen Ziffern der entsprechenden Gruppe an. In einer Gruppe darf jede Ziffer nur einmal vorkommen. Wurde "Größer als" im Optionsmenü gewählt, werden sich '>' Zeichen auf dem Spielbrett finden. Dies bedeutet, dass das Symbol auf einem der Felder größer sein muss als auf dem anderen.
+
+
+Optionen
+--------
+Statt Ziffern können Sie auch Buchstaben oder Farben (Menü Optionen/Symbole) verwenden. Im Killer Sudoku sind jedoch nur Ziffern möglich.
+Level bedeutet wie viel Prozent des Spielfeldes zu Beginn schon gefüllt ist. Level 0 ist hierbei die schwerste Einstellung, Level 100 ein gelöstes Sudoku.
+Falls Sie die Option gewählt haben, dass Ihnen Fehler angezeigt werden sollen, so werden ungültige Summen, ungültige Ungleichheiten und solche Symbole (Ziffern/Buchstaben) die in einer Zeile, einer Spalte oder einem Bereich mehrmals vorkommen entsprechend angezeigt.
+Die Standardgröße eines Sudoku ist 9x9 Felder. Dies lässt sich über das Menü ändern.
+
+
+Bedienung
+---------
+Klicken Sie auf den Knopf in der Symbolleiste um das Symbol (Ziffer/Buchstabe/Farbe) auszuwählen. 
+Klicken Sie danach in das Spielfeld um das gewählte Symbol in ein Kästchen einzutragen. Wenn Sie mit Ziffern oder Buchstaben spielen, können Sie diese auch mit der Tastatur auswählen. So benötigen Sie die Symbolleiste zum spielen gar nicht.
+Falls Sie einen Fehler gemacht haben, nutzen Sie die Rückgängigfunktion oder tragen Sie an die entsprechende Stelle ein anderes Symbol ein. Wenn Sie das rote X auf der Symbolleiste klicken, können Sie Symbole mit einem Mausklick aus den Quadrate entfernen.
+Ein Klick mit der rechten Maustaste in ein Quadrat setzt kleine Merker und eignet sich besonders für Anfänger.
+
+
+Zeit
+----
+Während des Spiels wird die Zeit gemessen. Die Zeit wird gestoppt während das Fenster minimiert ist. Die Zeit-besten Spieler die ein Sudoku gelöst haben werden in eine "Highscore" Liste eingetragen. Es jedoch nicht erlaubt zuvor die Bewege/Hinweis Funktion zu verwenden, wenn man nach der Lösung eingetragen werden möchte.
+Alle Highscore Tabellen sind nur für nicht-symmetrische Spiele in den Größen 6, 9, 12 mit dem Level 0.
+
+Dies sind meine Bestzeiten:
+
+6x6 	9x9  	12x12	Standard Sudoku
+0:54	3:28 	17:10	Diagonalen aus
+1:22	8:35	29:23	Diagonalen an
+
+6x6 	9x9  	Killer Sudoku
+2:01	27:41	Diagonalen aus
+3:55	30:05	Diagonalen an
+
+6x6 	9x9  	Größer-Als Sudoku
+2:33	27:25	Diagonalen aus
+3:08	35:27	Diagonalen an      
+
+
+Der Computer kann Ihre Sudoku lösen
+-----------------------------------
+Der Computer kann Ihre Sudoku Spiele lösen. Zuerst ist die Option für die Diagonalen an bzw. auszuschalten. Danach löschen Sie das Spielfeld und setzen dann ihre eigenen Symbole. Danac wählen Sie im Menü Spiel den Befehl Lösen. Der Computer wird dann die fehlenden Kästchen füllen. Sollten hierbei einige Kästchen leer bleiben, ist Ihre Vorgabe nicht zu lösen. Gibt es mehr als eine Lösung, so kann die "Lösen"-Funktion (F9) wiederholt werden um alle möglichen Löungen zu sehen. Die Anzahl der möglichen Lösungen ist in der Statuszeile zu sehen. Der Computer wird nie mehr als 100 Lösungen finden.
+
+
+Erstellen Sie Ihr eigenes Killer Sudoku
+---------------------------------------
+Verwenden Sie die Befehle "Löschen" und "Gruppen löschen" im Spiel-Menü um das Spielfeld zu leeren. Drücken Sie dann Einfügen oder verwenden Sie den Summenknopf in der Symbolleiste.
+Wie erstellt man eine neue Gruppe: Drücken Sie die linke Maustaste, bewegen Sie dann die Maus über die Kästchen die zu der Gruppe gehören. Lassen Sie die Maustaste los nachdem Sie die Gruppe so abgegrenzt haben und geben Sie nun die Summe des Bereiches in den gezeigten Kasten ein. 
+Wie vergrößert man eine Gruppe: Klicken Sie mit der linken Maustaste in eine Gruppe - halten Sie die Maustaste gedrückt! Bewegen Sie nun die Maus in die angrenzenden Kästchen. Wenn Sie alle Kästchen zur Gruppe hinzugefügt haben, lassen Sie die Maustaste los.
+Wie verbindet man zwei Gruppen: Bewegen Sie die Maus über die erste Gruppe, danach mit gedrückter, linker Maustaste auf die zweite Gruppe.
+Wie ändert man die Summe einer Gruppe: Klicken Sie auf die Gruppe und geben Sie danach eine neue Summe ein.
+Wie löscht man eine Gruppe: Ändern Sie deren Summe auf 0.
+
+Erstellen Sie Ihr eigenes Größer-Als Sudoku
+-------------------------------------------
+Verwenden Sie die Menübefehle Spiel/Löschen und Spiel/"Lösche '>' Zeichen um das Spielfeld zu leeren. Drücken Sie dann die '>' Taste oder wählen die den '>' Knopf aus der Symbolleiste. Ein Klick mit der linken Maustaste wird ein '>' in das Spielfeld setzen, der Klick mit der rechten Maustaste ein '<'. Die linke Maustaste kann auch dazu benutzt werden falsch gesetzte Zeichen wieder zu löschen.
+
+Der Algorithmus
+---------------
+Die folgenden Prinzipien werden bei der Berechnung jedes neuen Puzzels verwendet. Menschliche Spieler können sie auch nutzen. Die ersten beiden Prinzipien sind häufig genug um ein Spiel zu lösen. Das Wort "Linie" bedeutet Zeile (Reihe), Spalte, Region (Gruppe) oder Diagonale.
+
+1) Wenn in einem Kästchen nur ein Symbol eingetragen werden kann, trage es ein.
+2) Wenn in einer Linie ein bestimmtes Symbol nur an einer bestimmten Stelle sein kann, trage es ein.
+3) Wenn in n Kästchen einer Linie nur bestimmte n Symbole sein können, können diese Symbole nicht in anderen Kästchen der selben Linie existieren.
+4) Wenn nur bestimmte n Symbole in bestimmten Kästchen einer Linie sein können, können keine andetem Symbole in in diesen Kästchen sein.
+5) Falls in einer Linie ein Symbol nur in dem Bereich der Linie sein kann wo diese eine andere Linie schneidet, kann dieses Symbol nicht in anderen Kästchen der anderen Linie (außerhalb des Schittpunkte) sein. Diese Regel wird nur für šberschneidungen verwendet die aus mehr als einem Kästchen bestehen (also Schnittstellen zwischen Zeile und Region und Spalte und Region)
+6) Falls bestimmte Symbole nur in n Spalten und n Kästchen verwendet werden können und all diese n*n Kästchen in der selben Zeile sind, dann kann dieses Symbol nur in diesen n Zeilen in diesen n Spalten sein. Eine ähnliche Regel ergibt sich wenn man Spalten und Zeilen vertauscht. Diese Regel nennt sich "Schwertfisch" oder "X-Wing".
+7) Killer Sudoku: Finde alle möglichen Permutationen für jede Gruppe. Die Permutationen müssen die richtige Summe und eindeutige (einmalig vorkommende) Symbole enthalten. Falls ein Symbol nicht in einem Kästchen vorkommen kann, entferne die Permutation die dieses Symbol enthält aus dieser Gruppe. Gruppen mit mehr als 5 Kästchen können ignoriert werden da es zu viele Permutation gibt.
+8) Killer Sudoku: Wenn ein Symbol in einem Kästchen in keiner der Permutationen vorkommt, kann das Symbol nicht in der diesem Kästchen sein.
+9) Killer Sudoku: Wenn ein Symbol in einer Gruppe in alle Permutationen vorkommt und die gesammte Gruppe in einer einzelnen Linie liegt, kann dieses Symbol an keiner Position der Linie außerhalb der Gruppe vorkommen.
+10) Killer Sudoku: Die Gesamtsumme aller Symbole einer Linie ist (Größe*(Größe+1)/2). Zieht man dies von der Summe der Gruppen die komplett in einer Linie sind ab, erhält man die Summe der anderen Kästchen in dieser Linie. Diese Regel nennt man "45".
+11) Größer-Als Sudoku: Wenn auf einem Feld nur die Symbole von A bis B sein können, so können nur Symbole die größer als A sind auf dem angrenzenden mit '>' markierten Feld sein und nur Symbole die "kleiner" sind als B auf dem daran angrenzenden Feld.
+12) Nachdem alle vorherigen Prinzipien angewendet wurden, versuchen Sie eine zufällige Zahl in ein zufälliges Kästchen zu setzen. Stellt sich dies später als unlösbar dar, kehrt man dorthin zurück und setzt ein anderes Symbol in das Kästchen.
+13) Jedes Puzzle wird so errechnet, dass es nur eine einzige Lösung besitzt und ohne Regel 12) gelöst werden kann.
+
+
+Was ist neu
+-----------
+3.1.1 (2009-08-07)
+Ungerade/Gerade Sudoku
+Kandidaten Rückgängig/Wiederholen
+Optionen / Zeige Fehler...
+Spiel / Geben eigenes Spiel
+Zug / Berechnen Kandidaten
+
+3.0 (2007-12-26)
+multi Sudoku (Double, Butterfly, Samurai, ...)
+Highscore Tabellen für 12x12 Killer und Größer-Als 
+Spiel / Herstellen PDF
+
+2.3 (2006-06-20)
+Größer-Als Sudoku
+Die Funktion "Lösen" findet alle Lösungen
+
+2.2 (2006-04-29)
+Hiscore ist in "All Users\Application Data" schreiben
+X an der Statusleiste bedeutet Diagonalen an
+
+2.1 (2006-03-01)
+rechte Maustaste zum setzen von kleinen Merkern
+besserer Algorithmus, neue Regeln 3, 4, 6, 9, 10
+Level
+Option Symmetrisch
+
+2.0 (2006-02-19)
+Killer Sudoku
+Speichern/Öffnen von Dateien
+Als Bild speichern
+Optionen / Farben
+
+1.0 (2005-11-04)
+Rückgängig, Wiederholen
+Lösen
+
+
+Lizenz
+------
+Dieses Programm wird unter den Reegln der "GNU General Public License" vertrieben. Sie können diese von der Webseite des Autoren oder http://opensource.org/licenses herunterladen. Dies ist nur eine Kurzfassung der Lizenz:
+
+1) Das Programm ist frei. Sie können es mit jedem Medium weiterverteilen. Es dürfen andere Programme (freie und kommerzielle) auf dem gleichen Medium sein.
+2) Sie dürfen das Programm verändern und auch Teile des Programmes in eigene Programme einbauen. In beiden Fällen dürfen Sie geänderte und abgewandelte Versionen nur weiterverteilen wenn folgende Kriterien erfüllt sind:
+  a) Diese Lizenz darf nicht geändert oder entfernt werden.
+  b) Der Name des Original Autoren darf nicht gelöscht werden.
+  c) Sie dokumentieren schriftlich alle Änderungen mit entsprechendem Datum.
+  d) Sie stellen den geänderten Quellcode per FTP oder HTTP zur Verfügung.
+3) Das Programm wird ohne jegliche Garantie zur Verfügung gestellt. 
+
+
+http://petr.lastovicka.sweb.cz
+
+Deutsche Übersetzung: Olaf Nöhring ( http://www.team-noehring.de ), 2006-June-27
