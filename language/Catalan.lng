@@ -1,0 +1,147 @@
+;ajuda fitxer nom
+13=readme.txt
+
+;botons de la caixa dialeg  
+1=OK
+2=Cancel.lar
+
+;acceleradors de teclat
+97=Ctrl+
+98=Shift+
+99=Alt+
+
+
+;menu
+400=&Joc
+202=&Nou Joc
+235=&Editor
+236=&Acabar editor
+203=&Solucionar
+237=&Esborrar tot
+206=Esborrar s&imbols
+228=Esborrar &marques
+221=Esborrar &grups
+227=Esborrar '>' s&ignes
+231=Esborrar consecuti&us
+219=&Obrir...
+220=&Guardar...
+222=Guardar &imatge...
+229=Crear PD&F...
+215=&Maximes puntuacions...
+211=Esborrar configuracio
+214=Esborrar records
+201=&Sortir
+
+405=&Moure
+204=&Desfer
+205=&Refer
+233=D&esfer simbol
+234=R&efer simbol
+212=Desfer &tot
+213=Refer t&ot
+216=&Pista
+238=&Mostrar candidats
+
+402=&Opcions
+208=&Diagonals
+223=&Simatrics
+217=&Assissi
+226=&mes gran que
+230=Co&nsecutiu
+232=&Parells/Imparells
+224=&Nivell...
+209=Mostrar &errors...
+218=&Colors...
+406=S&imbols
+350=&Digits
+351=&Lletres
+352=&Colors
+403=Llen&guatge
+
+401=&Tamany
+
+407=M&ulti
+
+404=&ajuda
+225=&Llegeix-me
+210=&Sobre...
+
+
+;caixa dialeg colors  
+23=Colors
+515=Color simbols:
+508=Fons:
+517=Grup:
+509=Graella:
+512=Graella gran:
+518=Suma:
+521=error de Suma :
+514=Erros:
+513=Numero o lletra:
+524=Mes gran que el signe:
+525=Error de desigualtat:
+526=sudoku assissi
+527=Mes gran que sudoku
+529=signe Consecutiu :
+530=error Consecutiu :
+532=fons parells:
+
+;caixa dialeg sobre
+11=Sobre
+511=Versio
+
+;Crear Nou grup dialeg caixa
+24=Grup
+522=Suma:
+
+;caixa dialeg de canvi de nivell  
+25=Nivell
+540=Numero de 0 a 100:
+
+;caixa de dialeg Mostrar errors  
+27=Mostrar errors
+541=Mostrar errors despres
+542=segonds
+
+;caixa de dialeg Mostrar records 
+14=Sudoku - records
+610=nom
+611=Data
+612=Hora
+519=Tamany:
+501=&Diagonals
+502=&Assassi
+503=&Mes gran que
+504=Co&nsecutiu
+505=&Parells/Imparells
+
+;Nou best score dialeg caixa
+12=High score
+520=Your nom :
+
+;caixa de dialeg generar fitxer PDF
+26=Crear PDF
+300=Contador total:
+301=Contador a la plana:
+302=Tamany de plana:
+303=Fitxer de sortida:
+304=Joc
+305=Simbols
+306=Borde de la plana:
+307=Espaiat:
+309=Simetric
+312=Nivell:
+
+;barra d'estat
+660=grups
+661=Joc acabat
+662=solucions
+
+;missatges d'error
+730=No es pot Obrir el fitxer %s
+731=format Invalid de %s
+733=No es pot Crear el fitxer %s
+735=No es pot escriure al registre de Windows
+799=Realment vols esborrar tots els records ?
+800=La suma total de tots els grups es %d, pero hauria de ser %d
+801=Vols començar un Nou Joc ?
