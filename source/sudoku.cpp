@@ -701,9 +701,11 @@ BOOL CALLBACK ScoreProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM)
 			else{
 				TScore *s= curScoreTab->score;
 				SetBkMode(ps.hdc, TRANSPARENT);
+				int dpi=GetDeviceCaps(ps.hdc, LOGPIXELSX);
+
 				for(int i=0; i<Dscore; i++, s++){
 					if(!s->playtime) continue;
-					int y=24*i+35;
+					int y=(24*i+35)*dpi/96;
 					SetTextColor(ps.hdc, i==curScoreTab->lastScore ? colors[clLastScore] : 0);
 					TextOutW(ps.hdc, 10, y, s->name, (int)wcslen(s->name)); //player name
 					SetTextAlign(ps.hdc, TA_RIGHT);
@@ -1298,6 +1300,12 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int cmdShow)
 	RECT rc;
 
 	inst = hInstance;
+
+	//DPIAware
+	typedef BOOL(WINAPI *TGetProcAddress)();
+	TGetProcAddress getProcAddress = (TGetProcAddress)GetProcAddress(GetModuleHandle(_T("user32")), "SetProcessDPIAware");
+	if(getProcAddress) getProcAddress();
+
 	memset(custom, 200, sizeof(custom));
 	_tcscpy(pdfObject.fn, _T("sudoku.pdf"));
 	pdfObject.pageWidth=595;
