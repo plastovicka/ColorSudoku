@@ -397,20 +397,20 @@ void paint(HDC dc, RECT *clip)
 							if(killer) OffsetRect(&rc, groupPad+kdx, groupPad);
 							if(greater) OffsetRect(&rc, signPad, signPad);
 							else if(consecutive) OffsetRect(&rc, consPad, consPad);
-							TCHAR c=0;
+							TCHAR ch=0;
 							switch(symbol){
 								default: //digits
-									c= num2char(v);
+									ch= num2char(v);
 									break;
 								case 1: //letters
-									c= (TCHAR)('A'+v);
+									ch= (TCHAR)('A'+v);
 									break;
 								case 2: //colors
 									FillRect(dc, &rc, clbr[v]);
 									break;
 							}
-							if(c) TextOut(dc, (rc.left+rc.right+1)>>1,
-								rc.top+(rc.bottom-rc.top-fontH[1])/2, &c, 1);
+							if(ch) TextOut(dc, (rc.left+rc.right+1)>>1,
+								rc.top+(rc.bottom-rc.top-fontH[1])/2, &ch, 1);
 						}
 						v++;
 					}
@@ -527,7 +527,7 @@ void invalidate()
 	InvalidateRect(hWin, 0, TRUE);
 }
 //---------------------------------------------------------------------------
-Tsquare *hitTest(LPARAM p, int *greater)
+Tsquare *hitTest(LPARAM p, int *side)
 {
 	int x, y, k, d, m, rx[4], ry[4];
 	Tsquare *s;
@@ -537,7 +537,7 @@ Tsquare *hitTest(LPARAM p, int *greater)
 	y=(HIWORD(p)-(toolBarVisible ? toolH : 0))/gridy;
 	if(!(x>=0 && x<extentx && y>=0 && y<extenty)) return 0;
 	s=&board[x*extenty+y];
-	if(greater){
+	if(side){
 		getSquareRect(s, &rc);
 		rx[0]=rx[2]=(rc.left+rc.right)>>1;
 		rx[1]=rc.left;
@@ -550,7 +550,7 @@ Tsquare *hitTest(LPARAM p, int *greater)
 			d=abs(rx[k]-LOWORD(p))+abs(ry[k]-HIWORD(p));
 			if(d<m){
 				m=d;
-				*greater=k;
+				*side=k;
 			}
 		}
 	}

@@ -82,26 +82,26 @@ void init(bool fromGener)
 static int SX[]={0, 0, 0, 0, 2, 0, 3, 0, 4, 3, 5, 0, 4, 0, 7, 5, 4, 0, 6, 0, 5, 7, 11, 0, 6, 5};
 static int SY[]={0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 3, 0, 2, 3, 4, 0, 3, 0, 4, 3, 2, 0, 4, 5};
 
-void getExtent(int gameType, int &size, int &extentx, int &extenty, int &multi, int &sizex, int &sizey)
+void getExtent(int _gameType, int &_size, int &_extentx, int &_extenty, int &_multi, int &_sizex, int &_sizey)
 {
 	int i, extentx1, extenty1;
 	Tcoord *o;
 
-	aminmax(size, 4, sizeA(SX)-1);
+	aminmax(_size, 4, sizeA(SX)-1);
 	for(;;){
-		sizex=SX[size];
-		sizey=SY[size];
-		if(sizex) break;
-		size++;
+		_sizex=SX[_size];
+		_sizey=SY[_size];
+		if(_sizex) break;
+		_size++;
 	}
 	extentx1=extenty1=0;
-	multi=gameTypeA[gameType].multi;
-	for(i=0, o=gameTypeA[gameType].coord; i<multi; i++, o++){
-		amin(extentx1, coord[i].x = o->x * size + o->xd * sizex);
-		amin(extenty1, coord[i].y = o->y * size + o->yd * sizey);
+	_multi=gameTypeA[_gameType].multi;
+	for(i=0, o=gameTypeA[_gameType].coord; i<_multi; i++, o++){
+		amin(extentx1, coord[i].x = o->x * _size + o->xd * _sizex);
+		amin(extenty1, coord[i].y = o->y * _size + o->yd * _sizey);
 	}
-	extentx = extentx1 + size;
-	extenty = extenty1 + size;
+	_extentx = extentx1 + _size;
+	_extenty = extenty1 + _size;
 }
 
 struct Tie { int i; Tline *e; };
