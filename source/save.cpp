@@ -59,32 +59,32 @@ const int diagTab[]={0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1};
 const int killerTab[]={0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0};
 const int greaterTab[]={0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
 
-TscoreTab *findScoreTab(BYTE gameType, BYTE size, BYTE diag, BYTE killer, BYTE greater, BYTE cons, BYTE oddeven, BYTE flags)
+TscoreTab *findScoreTab(BYTE _gameType, BYTE _size, BYTE _diag, BYTE _killer, BYTE _greater, BYTE _cons, BYTE _oddeven, BYTE flags)
 {
 	for(TscoreTab *t=score; t; t=t->next){
-		if(t->gameType==gameType && t->size==size && t->diag==diag &&
-			t->killer==killer && t->greater==greater && t->cons==cons &&
-			t->oddeven==oddeven && t->flags==flags)
+		if(t->gameType==_gameType && t->size==_size && t->diag==_diag &&
+			t->killer==_killer && t->greater==_greater && t->cons==_cons &&
+			t->oddeven==_oddeven && t->flags==flags)
 			return t;
 	}
 	return 0;
 }
 
-TscoreTab *getScoreTab(BYTE gameType, BYTE size, BYTE diag, BYTE killer, BYTE greater, BYTE cons, BYTE oddeven, BYTE flags)
+TscoreTab *getScoreTab(BYTE _gameType, BYTE _size, BYTE _diag, BYTE _killer, BYTE _greater, BYTE _cons, BYTE _oddeven, BYTE flags)
 {
-	TscoreTab *t= findScoreTab(gameType, size, diag, killer, greater, cons, oddeven, flags);
+	TscoreTab *t= findScoreTab(_gameType, _size, _diag, _killer, _greater, _cons, _oddeven, flags);
 	if(!t){
 		t=new TscoreTab;
 		t->next=score;
 		score=t;
 		t->lastScore=-1;
-		t->gameType=gameType;
-		t->size=size;
-		t->diag=diag;
-		t->killer=killer;
-		t->greater=greater;
-		t->cons=cons;
-		t->oddeven=oddeven;
+		t->gameType=_gameType;
+		t->size=_size;
+		t->diag=_diag;
+		t->killer=_killer;
+		t->greater=_greater;
+		t->cons=_cons;
+		t->oddeven=_oddeven;
 		t->flags=flags;
 		memset(t->score, 0, sizeof(t->score));
 	}
@@ -110,10 +110,10 @@ void addScore()
 	s.playtime=(WORD)playtime;
 	//get table
 	TscoreTab *a= getScoreTab((BYTE)gameType, (BYTE)size, (BYTE)diag, (BYTE)killer, (BYTE)greater, (BYTE)consecutive, (BYTE)oddeven);
-	TScore *score= a->score;
+	TScore *scoreTable= a->score;
 	//InsertSort
 	for(i=0; i<Dscore; i++){
-		if(s.playtime < score[i].playtime || !score[i].playtime) break;
+		if(s.playtime < scoreTable[i].playtime || !scoreTable[i].playtime) break;
 	}
 	if(i<Dscore){
 		//ask for player name
@@ -124,8 +124,8 @@ void addScore()
 		if(dlg!=IDCANCEL){
 			//add new record to the score table
 			a->lastScore=i;
-			for(int j=Dscore-1; j>i; j--)  score[j]=score[j-1];
-			score[i]=s;
+			for(int j=Dscore-1; j>i; j--)  scoreTable[j]=scoreTable[j-1];
+			scoreTable[i]=s;
 			//save to disk
 			writeScore();
 			//show table
@@ -133,7 +133,7 @@ void addScore()
 		}
 		else{
 			//delete empty table
-			if(!score[0].playtime){
+			if(!scoreTable[0].playtime){
 				assert(a==::score);
 				::score=a->next;
 				delete a;
@@ -587,14 +587,14 @@ void open(TCHAR *fn)
 					}
 				}
 				if(!strncmp(buf, "Time:", 5)){
-					int h, m, s;
-					i=sscanf(buf+5, "%d:%d:%d", &h, &m, &s);
+					int h, m, sec;
+					i=sscanf(buf+5, "%d:%d:%d", &h, &m, &sec);
 					if(i<=1){
 						err=4;
 					}
 					else if(pass && !editor){
 						playtime=h*60+m;
-						if(i==3) playtime=playtime*60+s;
+						if(i==3) playtime=playtime*60+sec;
 					}
 				}
 				fgets(buf, bufLen-4, f);

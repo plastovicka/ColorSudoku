@@ -264,7 +264,7 @@ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 11, "MS Shell Dlg"
 BEGIN
-    CTEXT           "(C) 2005-2012  Petr Lastovicka",510,4,49,105,10
+    CTEXT           "(C) 2005-2015  Petr Lastovicka",510,4,49,105,10
     RTEXT           "Version",511,30,23,30,9
     CTEXT           "Color  Sudoku",IDC_STATIC,21,5,72,9,SS_SUNKEN
     ICON            IDI_MAINICON,IDC_STATIC,15,20,20,20

@@ -262,10 +262,10 @@ void initGameTypeCombo(HWND hWnd)
 	SendDlgItemMessage(hWnd, 170, CB_SETCURSEL, sel, 0);
 }
 
-int openFileDlg(OPENFILENAME *o, HWND hWin, DWORD flags)
+int openFileDlg(OPENFILENAME *o, HWND hWnd, DWORD flags)
 {
 	for(;;){
-		o->hwndOwner= hWin;
+		o->hwndOwner= hWnd;
 		o->Flags= flags;
 		if(GetOpenFileName(o)) return 1; //ok
 		if(CommDlgExtendedError()!=FNERR_INVALIDFILENAME
@@ -274,10 +274,10 @@ int openFileDlg(OPENFILENAME *o, HWND hWin, DWORD flags)
 	}
 }
 
-int saveFileDlg(OPENFILENAME *o, HWND hWin, DWORD flags)
+int saveFileDlg(OPENFILENAME *o, HWND hWnd, DWORD flags)
 {
 	for(;;){
-		o->hwndOwner= hWin;
+		o->hwndOwner= hWnd;
 		o->Flags= flags | OFN_HIDEREADONLY;
 		if(GetSaveFileName(o)) return 1; //ok
 		if(CommDlgExtendedError()!=FNERR_INVALIDFILENAME
@@ -684,7 +684,6 @@ BOOL CALLBACK ScoreProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM)
 
 		case WM_PAINT:
 		{
-			RECT rc;
 			static const int Mbuf=64;
 			TCHAR *buf=(TCHAR*)_alloca(sizeof(TCHAR)*Mbuf);
 			static PAINTSTRUCT ps;
@@ -1207,10 +1206,10 @@ LRESULT CALLBACK WndMainProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
 					if(MessageBox(hWnd,
 						lng(799, "Do you really want to delete all hiscores ?"), title,
 						MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDYES){
-						for(TscoreTab *t=score; t;){
-							TscoreTab *t1= t->next;
-							delete t;
-							t=t1;
+						for(TscoreTab *tab=score; tab;){
+							TscoreTab *t1= tab->next;
+							delete tab;
+							tab=t1;
 						}
 						score=0;
 						writeScore();
