@@ -123,7 +123,7 @@ void initSquare(bool fromGener)
 	//allocate board
 	delete[] board;
 	board=new Tsquare[Nboard = extentx*extenty];
-	assert(extentx<=Mextent && extenty<=Mextent && Nboard<=Mboard);
+	assert(extentx<=Mextentx && extenty<=Mextenty && Nboard<=Mboard);
 
 	for(s=board; s<board+Nboard; s++){
 		s->lines= s->intersects= 0;

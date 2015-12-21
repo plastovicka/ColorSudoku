@@ -97,6 +97,9 @@ Following principles are used to generate every new puzzle. Human player can use
 
 What's new
 ----------
+3.2
+Gattai-8 (Monster Samurai) and Shichi
+
 3.1.4 (2012-02-20)
 Linux operating system is supported (WINE is required)
 colored icon

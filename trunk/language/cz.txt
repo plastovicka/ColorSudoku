@@ -93,6 +93,9 @@ Pøi generování zadání nové hry poèítaè postupuje podle následujících pravidel. S
 
 Co je nového
 ------------
+3.2
+tvary Gattai-8 (Monster Samurai) a Shichi
+
 3.1.4 (20.2.2012)
 hra funguje v operaèním systému Linux (když máte nainstalováno WINE)
 ikona je barevná

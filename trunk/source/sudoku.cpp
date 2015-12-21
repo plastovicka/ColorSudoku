@@ -100,9 +100,13 @@ Tcoord coordSohei[]={{1, 0, -1, 0}, {0, 1, 0, -1}, {2, 1, -2, -1}, {1, 2, -1, -2
 Tcoord coordFlower[]={{0, 0, 1, 1}, {0, 0, 0, 1}, {0, 0, 1, 0}, {0, 0, 2, 1}, {0, 0, 1, 2}};
 Tcoord coordWindmill[]={{1, 1, -1, -1}, {1, 0, -2, 0}, {0, 1, 0, 0}, {2, 1, -2, -2}, {1, 2, 0, -2}};
 Tcoord coordSamurai[]={{0, 0, 0, 0}, {2, 0, -2, 0}, {0, 2, 0, -2}, {2, 2, -2, -2}, {1, 1, -1, -1}};
+Tcoord coordShichi[] = {{1, 0, -1, 0}, {0, 1, 0, -1}, {2, 1, -2, -1}, {1, 2, -1, -2}, {3, 0, -3, 0}, {4, 1, -4, -1}, {3, 2, -3, -2}};
+Tcoord coordGattai8[] = {{0, 0, 0, 0}, {2, 0, -2, 0}, {0, 2, 0, -2}, {2, 2, -2, -2}, {1, 1, -1, -1}, {4, 0, -4, 0}, {4, 2, -4, -2}, {3, 1, -3, -1}};
 //order of gameTypeA items must not be changed, array index is written in score tables
-TgameType gameTypeA[]={{1, coordSimple, "Simple"}, {2, coordDouble, "Double"}, {2, coordTwodoku, "Twodoku"}, {4, coordButterfly, "Butterfly"}, {4, coordSohei, "Sohei"}, {5, coordFlower, "Flower"}, {5, coordWindmill, "Windmill"}, {5, coordSamurai, "Samurai"}, {3, coordTriple, "Triple"}, {0, 0, 0}};
-int gameTypeComboOrder[]={0, 1, 2, 8, 3, 4, 5, 6, 7};
+TgameType gameTypeA[]={{1, coordSimple, "Simple"}, {2, coordDouble, "Double"}, {2, coordTwodoku, "Twodoku"},
+	{4, coordButterfly, "Butterfly"}, {4, coordSohei, "Sohei"}, {5, coordFlower, "Flower"}, {5, coordWindmill, "Windmill"},
+	{5, coordSamurai, "Samurai"}, {3, coordTriple, "Triple"}, {7, coordShichi, "Shichi"}, {8, coordGattai8, "Gattai-8"}, {0, 0, 0}};
+int gameTypeComboOrder[]={0, 1, 2, 8, 3, 4, 5, 6, 7, 9, 10};
 
 static int tabDiag, tabSize, tabKiller, tabGreater, tabCons, tabOddEven, tabGameType;
 
