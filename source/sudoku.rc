@@ -144,6 +144,9 @@ BEGIN
         MENUITEM "Flower",                      455
         MENUITEM "Windmill",                    456
         MENUITEM "Samurai",                     457
+        MENUITEM SEPARATOR
+        MENUITEM "Shichi",                      459
+        MENUITEM "Gattai-8",                    460
     END
     POPUP "&Help"
     BEGIN

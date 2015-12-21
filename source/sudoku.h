@@ -7,12 +7,13 @@
 #include "resource.h"
 #include "lang.h"
 
-#define Mmulti 5            //number of grids
+#define Mmulti 8            //number of grids
 #define Msymbol 20          //number of symbols
 #define Mlen Msymbol        //line length
 #define Msize Msymbol       //single grid size
-#define Mextent (Msize*3-4) //entire board size
-#define Mboard (Mextent*Mextent)   //number of squares
+#define Mextentx (Msize*5-8) //entire board width
+#define Mextenty (Msize*3-4) //entire board height
+#define Mboard (Mextentx*Mextenty) //number of squares
 #define Mline (Mmulti*(3*Msize+2)) //number of lines
 #define Mintersect (Mmulti*(Msize+2)*13) //number of intersections
 #define MgroupLen 12  //group length
