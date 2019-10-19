@@ -1,0 +1,147 @@
+;help file name
+13=readme.txt
+
+;dialog box buttons
+1=OK
+2=Avbryt
+
+;keyboard accelerators
+97=Ctrl+
+98=Shift+
+99=Alt+
+
+
+;menu
+400=Spel
+202=Nytt spel
+235=Redigerare
+236=Sluta redigerare
+203=Lös
+237=Rensa allt
+206=Rensa symboler
+228=Rensa märken
+221=Rensa grupper
+227=Rensa '>' tecken
+231=Rensa i följd
+219=Öppna...
+220=Spara...
+222=Spara bild...
+229=Skapa PDF...
+215=Poängrekord...
+211=Radera inställningar
+214=Radera poängrekord
+201=Avsluta
+
+405=Flytta
+204=Ångra
+205=Gör om
+233=Ångra symbol
+234=Gör om symbol
+212=Ångra allt
+213=Gör om allt
+216=Hint
+238=Visa kandidater
+
+402=Alternativ
+208=Siagonaler
+223=Symmetrisk
+217=Killer
+226=Större än
+230=I följd
+232=Udda/Jämnt
+224=Nivå...
+209=Visa fel...
+218=Färger...
+406=Symboler
+350=Siffror
+351=Bokstäver
+352=Färger
+403=Språk
+
+401=Storlek
+
+407=Flera
+
+404=hjälp
+225=Läs mig
+210=Om...
+
+
+;Color dialog box
+23=Färger
+515=Färgsymboler:
+508=Bakgrund:
+517=Grupp:
+509=Grid:
+512=Stor grid:
+518=Sum:
+521=Sum fel:
+514=Misstag:
+513=Nummer eller bokstäver:
+524=Större än tecken:
+525=Ojämlikhetsfel:
+526=Killer sudoku
+527=Större än sudoku
+529=Pågående tecken:
+530=Följande fel:
+532=Även bakgrund:
+
+;Om dialog box
+11=Om
+511=Version
+
+;create new group dialog box
+24=Grupp
+522=Sum:
+
+;change level dialog box
+25=Nivå
+540=Nummer från 0 till 100:
+
+;show errors dialog box
+27=Visa fel
+541=Visa fel efter
+542=sekunder
+
+;show high scores dialog box
+14=Sudoku - Poängrekord
+610=Namn
+611=Datum
+612=Tid
+519=Storlek:
+501=Diagonalt
+502=Killer
+503=Större än
+504=Consecutive
+505=Udda/Jämnt
+
+;new best score dialog box
+12=Poängrekord
+520=Ditt namn :
+
+;generate PDF file dialog box
+26=Skapa PDF
+300=Totalt antal:
+301=Räkna på sidan:
+302=Sidans storlek:
+303=Utdatafil:
+304=Spel
+305=Symboler
+306=Sidgräns:
+307=Mellanrum:
+309=Symmetrisk
+312=Nivå:
+
+;status bar
+660=grupper
+661=Spelet är över
+662=lösningar
+
+;error messages
+730=Kan inte öppna filen %s
+731=Ogiltigt format av %s
+733=Kan inte skapa fil %s
+735=Det går inte att skriva till Windows-registret
+799=Vill du verkligen ta bort alla poängrekord ?
+800=Summan av alla grupper är %d, men det borde vara %d
+801=Vill du starta ett nytt spel ?
