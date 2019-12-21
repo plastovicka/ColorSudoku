@@ -267,7 +267,7 @@ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 11, "MS Shell Dlg"
 BEGIN
-    CTEXT           "(C) 2005-2015  Petr Lastovicka",510,4,49,105,10
+    CTEXT           "(C) 2005-2019  Petr Lastovicka",510,4,49,105,10
     RTEXT           "Version",511,30,23,30,9
     CTEXT           "Color  Sudoku",IDC_STATIC,21,5,72,9,SS_SUNKEN
     ICON            IDI_MAINICON,IDC_STATIC,15,20,20,20
@@ -411,7 +411,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,1,5,1
+ FILEVERSION 3,1,5,2
  PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -430,7 +430,7 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", " \0"
             VALUE "FileDescription", "Color Sudoku\0"
-            VALUE "FileVersion", "3, 1, 5, 1\0"
+            VALUE "FileVersion", "3, 1, 5, 2\0"
             VALUE "InternalName", "\0"
             VALUE "LegalCopyright", "© 2005-2019 Petr Laštovièka\0"
             VALUE "LegalTrademarks", "\0"

@@ -380,7 +380,9 @@ void initLang()
 			case LANG_GERMAN: s=_T("Deutsch"); break;
 			case LANG_FRENCH: s=_T("French"); break;
 			case LANG_POLISH: s=_T("Polski"); break;
+			case LANG_RUSSIAN: s = _T("Russian"); break;
 			case LANG_SWEDISH: s=_T("Swedish"); break;
+			case LANG_UKRAINIAN: s = _T("Ukrainian"); break;
 			default: s=_T("English"); break;
 		}
 		lstrcpy(lang, s);
