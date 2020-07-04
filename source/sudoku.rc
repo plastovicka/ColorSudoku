@@ -267,7 +267,7 @@ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 11, "MS Shell Dlg"
 BEGIN
-    CTEXT           "(C) 2005-2019  Petr Lastovicka",510,4,49,105,10
+    CTEXT           "(C) 2005-2020  Petr Lastovicka",510,4,49,105,10
     RTEXT           "Version",511,30,23,30,9
     CTEXT           "Color  Sudoku",IDC_STATIC,21,5,72,9,SS_SUNKEN
     ICON            IDI_MAINICON,IDC_STATIC,15,20,20,20
@@ -311,26 +311,26 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,116,31,50,14
 END
 
-IDD_PDF DIALOG DISCARDABLE  0, 0, 187, 246
+IDD_PDF DIALOG DISCARDABLE  0, 0, 197, 246
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Create PDF"
 FONT 9, "MS Shell Dlg"
 BEGIN
     LTEXT           "Total count:",300,7,9,48,8
     EDITTEXT        160,59,6,23,14,ES_AUTOHSCROLL | ES_NUMBER
-    RTEXT           "Count on page:",301,85,9,59,8
-    COMBOBOX        161,148,7,32,125,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Page size:",302,7,31,49,8
-    COMBOBOX        162,59,29,46,115,CBS_DROPDOWNLIST | WS_VSCROLL | 
+    RTEXT           "Count on page:",301,93,9,59,8
+    COMBOBOX        161,156,7,32,125,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Page size:",302,7,31,61,8
+    COMBOBOX        162,71,29,39,115,CBS_DROPDOWNLIST | WS_VSCROLL | 
                     WS_TABSTOP
-    EDITTEXT        163,116,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT           "x",IDC_STATIC,145,31,8,8
-    EDITTEXT        164,155,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT           "Page border:",306,7,52,53,8
-    EDITTEXT        168,63,49,23,14,ES_AUTOHSCROLL
-    RTEXT           "Spacing:",307,93,52,50,8
-    EDITTEXT        169,148,49,23,14,ES_AUTOHSCROLL
-    GROUPBOX        "Game",304,7,69,92,115
+    EDITTEXT        163,124,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "x",IDC_STATIC,153,31,8,8
+    EDITTEXT        164,163,28,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Page border:",306,7,52,59,8
+    EDITTEXT        168,71,49,23,14,ES_AUTOHSCROLL
+    RTEXT           "Spacing:",307,101,52,50,8
+    EDITTEXT        169,156,49,23,14,ES_AUTOHSCROLL
+    GROUPBOX        "Game",304,7,69,98,115
     CONTROL         "Diagonals",IDC_DIAG,"Button",BS_AUTOCHECKBOX | 
                     WS_TABSTOP,12,85,81,10
     CONTROL         "Symmetrical",309,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
@@ -343,18 +343,18 @@ BEGIN
                     WS_TABSTOP,12,137,81,10
     CONTROL         "Odd/Even",IDC_ODDEVEN,"Button",BS_AUTOCHECKBOX | 
                     WS_TABSTOP,12,150,81,10
-    COMBOBOX        170,12,165,80,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+    COMBOBOX        170,12,165,83,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
                     WS_TABSTOP
-    GROUPBOX        "Symbols",305,113,77,67,60
-    CONTROL         "Digits",350,"Button",BS_AUTORADIOBUTTON | WS_GROUP,121,
+    GROUPBOX        "Symbols",305,121,77,67,60
+    CONTROL         "Digits",350,"Button",BS_AUTORADIOBUTTON | WS_GROUP,129,
                     91,53,10
-    CONTROL         "Letters",351,"Button",BS_AUTORADIOBUTTON,121,106,53,10
-    CONTROL         "Colors",352,"Button",BS_AUTORADIOBUTTON,121,121,53,10
-    RTEXT           "Level:",312,103,153,41,8
-    EDITTEXT        165,150,151,26,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Letters",351,"Button",BS_AUTORADIOBUTTON,129,106,53,10
+    CONTROL         "Colors",352,"Button",BS_AUTORADIOBUTTON,129,121,53,10
+    RTEXT           "Level:",312,109,153,43,8
+    EDITTEXT        165,158,151,26,12,ES_AUTOHSCROLL | ES_NUMBER
     LTEXT           "Output file:",303,7,192,173,8
-    EDITTEXT        166,7,205,156,14,ES_AUTOHSCROLL
-    PUSHBUTTON      ". . .",167,164,205,16,14
+    EDITTEXT        166,7,205,159,14,ES_AUTOHSCROLL
+    PUSHBUTTON      ". . .",167,171,205,16,14
     DEFPUSHBUTTON   "OK",IDOK,32,224,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,105,224,50,14
 END
@@ -411,7 +411,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,1,5,2
+ FILEVERSION 3,1,5,3
  PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -430,9 +430,9 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", " \0"
             VALUE "FileDescription", "Color Sudoku\0"
-            VALUE "FileVersion", "3, 1, 5, 2\0"
+            VALUE "FileVersion", "3, 1, 5, 3\0"
             VALUE "InternalName", "\0"
-            VALUE "LegalCopyright", "© 2005-2019 Petr Laštovièka\0"
+            VALUE "LegalCopyright", "© 2005-2020 Petr Laštovièka\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "sudoku.exe\0"
             VALUE "PrivateBuild", "\0"
@@ -499,7 +499,7 @@ BEGIN
     IDD_PDF, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 180
+        RIGHTMARGIN, 190
         TOPMARGIN, 7
         BOTTOMMARGIN, 239
     END

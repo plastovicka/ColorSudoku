@@ -1,0 +1,148 @@
+; Traducción: Ricardo A. Rivas
+; https://sites.google.com/site/rivica
+; Versión: 3.1 - 1-julio-2020
+;archivo de ayuda
+13=readme.txt
+
+;botones de recuadro de diálogo
+1=Aceptar
+2=Cancelar
+
+;aceleradores de teclado
+97=Ctrl+
+98=Shift+
+99=Alt+
+
+;menú
+400=&Juego
+202=&Nuevo juego
+235=&Editor
+236=&Terminar editor
+203=&Resolver
+237=&Limpiar todo
+206=L&impiar símbolos
+228=Li&mpiar marcas
+221=Lim&piar grupos
+227=Limpiar &signos '>'
+231=Limpiar consecuti&vos
+219=&Abrir...
+220=Guar&dar...
+222=Guardar &imagen...
+229=Crear PD&F...
+215=Ma&yores puntuaciones...
+211=Limpiar &opciones
+214=Limpiar mayore&s puntuaciones
+201=Sa&lir
+
+405=&Mover
+204=&Deshacer
+205=&Rehacer
+233=D&eshacer símbolo
+234=Reha&cer símbolo
+212=Deshacer &todo
+213=Rehacer t&odo
+216=A&yuda
+238=Mostr&ar candidatos
+
+402=&Opciones
+208=&Diagonales
+223=&Simétrico
+217=&Killer
+226=&Mayor que
+230=Consec&utivos
+232=&Pares/Impares
+224=&Nivel...
+209=Mostrar &errores...
+218=&Colores...
+406=Sím&bolos
+350=Ci&fras
+351=&Letras
+352=C&olores
+403=&Idioma
+
+401=&Tamaño
+
+407=M&ulti
+
+404=&Ayuda
+225=&Leer
+210=&Detalles...
+
+;recuadro de diálogo de colores
+23=Colores
+515=Símbolos de colores:
+508=Fondo:
+517=Grupo:
+509=Cuadrícula:
+512=Cuadrícula grande:
+518=Suma:
+521=Error de suma:
+514=Error:
+513=Cifra o letra:
+524=Mayor que signo:
+525=Error de desigualdad:
+526=Killer sudoku
+527=Mayor que sudoku
+529=Signo consecutivo:
+530=Error consecutivo:
+532=Fondo parejo:
+
+;recuadro de diálogo
+11=Detalles
+511=Versión
+
+;crear nuevo recuadro de diálogo de grupo
+24=Grupo
+522=Suma:
+
+;cambiar recuadro de diálogo de nivel
+25=Nivel
+540=Cifra de 0 a 100:
+
+;recuadro de diálogo de mostrar errores
+27=Mostrar errores
+541=Mostrar errores luego de
+542=segundos
+
+;mostrar recuadro de diálogo de mayores puntuaciones
+14=Sudoku - Mayores puntuaciones
+610=Nombre
+611=Fecha
+612=Hora
+519=Tamaño:
+501=&Diagonales
+502=&Killer
+503=&Mayor que
+504=Co&nsecutivos
+505=&Pares/Impares
+
+;nuevo recuadro de diálogo de mejor puntuación
+12=Mejor puntuación
+520=Nombre:
+
+;generar recuadro de diálogo como archivo PDF
+26=Crear PDF
+300=Cuenta total:
+301=Cuenta en página:
+302=Tamaño de página:
+303=Archivo resultante:
+304=Juego
+305=Símbolos
+306=Borde de página:
+307=Espaciado:
+309=Simétrico
+312=Nivel:
+
+;barra de estado
+660=grupos
+661=Fin de juego
+662=soluciones
+
+;mensajes de error
+730=Imposible abrir archivo %s
+731=Formato inválido de %s
+733=Imposible crear archivo %s
+735=Imposible escribir en Registro de Windows
+799=¿Borrar toda puntuación alta?
+800=Suma total de grupos es %d pero debería ser %d
+801=¿Iniciar nuevo juego?
