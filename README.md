@@ -8,4 +8,4 @@ Sudoku game with numbers, letters or colors. You can play many variants - Killer
 
 You can **download** released binaries (EXE file) for Windows from [sourceforge.net](https://sourceforge.net/projects/colorsudoku/).
 
-![Color Sudoku screenshot](http://petr.lastovicka.sweb.cz/img/sohei.png)
+![Color Sudoku screenshot](https://plastovicka.github.io/img/sudoku-sohei.png)
