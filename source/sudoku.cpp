@@ -920,7 +920,7 @@ LRESULT CALLBACK AboutProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM)
 					return TRUE;
 				case 123:
 					GetDlgItemTextA(hWnd, wParam, buf, sizeA(buf)-13);
-					if(!_tcscmp(lang, _T("English"))) strcat(buf, "/indexEN.html");
+					if(!_tcscmp(lang, _T("Èesky"))) strcat(buf, "/indexCS.html");
 					ShellExecuteA(0, 0, buf, 0, 0, SW_SHOWNORMAL);
 					break;
 			}

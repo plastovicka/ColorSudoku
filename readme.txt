@@ -154,4 +154,4 @@ This program is distributed under the terms of "GNU General Public License". You
 3) The Program is provided without warranty. 
 
 
-http://petr.lastovicka.sweb.cz
+https://plastovicka.github.io

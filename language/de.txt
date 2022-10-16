@@ -134,6 +134,6 @@ Dieses Programm wird unter den Reegln der "GNU General Public License" vertriebe
 3) Das Programm wird ohne jegliche Garantie zur Verfügung gestellt. 
 
 
-http://petr.lastovicka.sweb.cz
+https://plastovicka.github.io
 
 Deutsche Übersetzung: Olaf Nöhring ( http://www.team-noehring.de ), 2006-June-27

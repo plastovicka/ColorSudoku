@@ -148,4 +148,4 @@ Na tento program se vztahuje licence "GNU General Public License". Zde jsou uved
  c) Zdokumentujete všechny provedené zmìny a u každé zmìny uvedete datum.
  d) Zdrojové kódy (vèetnì vašich úprav a rozšíøení) zdarma zveøejníte na internetu. 
 
-http://petr.lastovicka.sweb.cz
+https://plastovicka.github.io
